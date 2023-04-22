@@ -6,7 +6,6 @@ from utils import init_web_drivers, close_drivers
 import argparse
 
 
-
 # The main function to scrape car details for a given number of pages and a user query URL.
 def main(num_pages_to_scrape, user_query_url, chrome_driver_path):
     # Iterate through each page number.
