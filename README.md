@@ -37,7 +37,7 @@ For example:
 
 sh
 Copy code
-python main.py --num_pages 5 --user_query_url "https://www.yad2.co.il/vehicles/private-cars" --chrome_driver_path "/path/to/chromedriver"
+python main.py --n 5 -u "https://www.yad2.co.il/vehicles/private-cars" -d "/path/to/chromedriver"
 The scraped data will be saved in a CSV file in the same directory as the script.
 
 ## Customization
