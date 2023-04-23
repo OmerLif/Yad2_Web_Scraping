@@ -7,7 +7,7 @@ from SCRAPING_CONSTANTS import YAD2_BASE_URL
 
 def page_cars_details_to_csv(cars: List[Dict[str, str]], web_driver_pool: List[WebDriver]):
     # Open or create a CSV file in append mode with UTF-8 encoding.
-    with open('car_details.csv', mode='a', newline='', encoding='utf-8') as csvfile:
+    with open('resources/car_details.csv', mode='a', newline='', encoding='utf-8') as csvfile:
         for car in cars:
             # Construct the URL for the current car.
             car_url = YAD2_BASE_URL + "/item/" + car['item-id']
