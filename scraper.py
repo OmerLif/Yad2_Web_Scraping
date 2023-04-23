@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from SCRAPING_CONSTANTS import USER_AGENTS
 import time
 from typing import List, Dict
-from utils import *
+from utils.chrome_drive_utils import *
 import random
 
 
