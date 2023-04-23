@@ -3,8 +3,18 @@ from sklearn.model_selection import GridSearchCV, KFold
 from utils.data_utils import *
 
 
-def find_best_cars_using_random_forest(df, X, y, model):
+def predict_best_cars_using_random_forest(df, X, y, model):
+    """
+      This function trains a random forest regression model using grid search
+      and cross-validation, and extracts the best cars.
+
+      :param df: DataFrame containing the original data
+      :param X: DataFrame containing the input features
+      :param y: Series containing the target variable
+      :param model: random forest model class
+    """
     # Define the hyper-parameters to search
+    print("Performing hyperparameter tuning...")
     grid_search = hyper_parameters_tunning(X, model, y)
     # Train the model with the best hyperparameters on the full dataset
     best_rf = grid_search.best_estimator_
@@ -36,8 +46,9 @@ def hyper_parameters_tunning(X, model, y):
 
 
 def main():
-    df, X, y = data_preprocess()
-    find_best_cars_using_random_forest(df, X, y, RandomForestRegressor)
+    df, X, y = preprocess_data()
+    print("Starting random forest regression algorithm...")
+    predict_best_cars_using_random_forest(df, X, y, RandomForestRegressor)
 
 
 if __name__ == '__main__':
