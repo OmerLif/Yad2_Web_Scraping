@@ -17,7 +17,6 @@ def init_web_drivers(chrome_driver_path=None, pool_size=10):
     # Set the path to the ChromeDriver executable
     if not chrome_driver_path:
         chrome_driver_path = os.environ.get('CHROME_DRIVER_PATH', DEFAULT_CHROME_DRIVE_PATH)
-    print(chrome_driver_path)
     web_driver_pool = [
         webdriver.Chrome(executable_path=chrome_driver_path, options=options)
         for _ in range(pool_size)]
